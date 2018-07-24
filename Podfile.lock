@@ -1,24 +1,29 @@
 PODS:
   - Kingfisher (4.8.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - RxCocoa
   - RxSwift
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - RxCocoa
     - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: ff1032afe8babe59623ba77e3eb0e17223489b16
+PODFILE CHECKSUM: 7200304d67572125d812c483c28fd01b6594dd0f
 
 COCOAPODS: 1.5.3
