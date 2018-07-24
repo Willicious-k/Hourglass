@@ -7,20 +7,54 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LandingViewController: UIViewController {
 
   @IBOutlet weak var timer: UISlider!
-  @IBOutlet weak var secLabel: UILabel!
+  @IBOutlet weak var durationLabel: UILabel!
+  @IBOutlet weak var startButton: UIButton!
+
+  let disposeBag = DisposeBag()
 
   @IBAction func unwindToLanding(segue: UIStoryboardSegue) { }
 
-  @IBAction func handleSlider(_ sender: UISlider) {
-    
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    timer.rx.value
+      .filter { value in
+        value < 1
+      }.subscribe(onNext: { value in
+        self.startButton.isEnabled = false
+      }).disposed(by: disposeBag)
+
+    timer.rx.value
+      .filter { value in
+        value >= 1
+      }.subscribe(onNext: { value in
+        self.startButton.isEnabled = true
+      }).disposed(by: disposeBag)
+
+    timer.rx.value
+      .subscribe(onNext: { value in
+        let second = Int(value)
+        self.durationLabel.text = String(second)
+      }).disposed(by: disposeBag)
+
+    let events = ControlEvent.merge([timer.rx.controlEvent(UIControlEvents.touchDown).asObservable(),
+                                     timer.rx.controlEvent(UIControlEvents.touchUpInside).asObservable()])
+    events.subscribe(onNext: {
+      let value = Int(self.timer.value)
+        self.durationLabel.text = "\(value) seconds"
+        self.timer.setValue(Float(value), animated: true)
+      }).disposed(by: disposeBag)
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    durationLabel.text = " "
   }
 
 }
