@@ -56,7 +56,14 @@ class LandingViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     durationLabel.text = " "
+    startButton.isEnabled = false
+    timer.setValue(Float(0.0), animated: false)
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let dest = segue.destination as? ShowViewController {
+      dest.initialDuration = Int(timer.value)
+    }
+  }
 }
 
