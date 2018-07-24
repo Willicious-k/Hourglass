@@ -44,7 +44,8 @@ class LandingViewController: UIViewController {
       }).disposed(by: disposeBag)
 
     let events = ControlEvent.merge([timer.rx.controlEvent(UIControlEvents.touchDown).asObservable(),
-                                     timer.rx.controlEvent(UIControlEvents.touchUpInside).asObservable()])
+                                     timer.rx.controlEvent(UIControlEvents.touchUpInside).asObservable(),
+                                     timer.rx.controlEvent(UIControlEvents.touchUpOutside).asObservable()])
     events.subscribe(onNext: {
       let value = Int(self.timer.value)
         self.durationLabel.text = "\(value) seconds"
