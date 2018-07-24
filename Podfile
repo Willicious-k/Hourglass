@@ -8,5 +8,6 @@ target 'Hourglass' do
   # Pods for Hourglass
   pod 'RxSwift'
   pod 'Kingfisher'
+  pod 'SnapKit'
 
 end
