@@ -7,59 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BEA81C21210709B30044EBD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA81C20210709B30044EBD9 /* AppDelegate.swift */; };
-		BEA81C23210709B30044EBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA81C22210709B30044EBD9 /* ViewController.swift */; };
-		BEA81C26210709B30044EBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA81C24210709B30044EBD9 /* Main.storyboard */; };
-		BEA81C28210709B30044EBD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA81C27210709B30044EBD9 /* Assets.xcassets */; };
-		BEA81C2B210709B30044EBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA81C29210709B30044EBD9 /* LaunchScreen.storyboard */; };
+		0FEBCCAE58F9BE994A5E772EA30C9367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65827C7B35790C83550F3AEFB1250071 /* LaunchScreen.storyboard */; };
+		32045C8D81B8B8A50CED496F60B9386C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BD6667899332607D76460CE5FC08FC /* AppDelegate.swift */; };
+		577A936C324237E301852F7CB1EB472D /* Pods_Hourglass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C767C9459866410C67D5D74D2648ED70 /* Pods_Hourglass.framework */; };
+		5E0B9FDA40DC39F7F61B768E28CC6696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EB19C5BA06B731B241922CEE67242 /* ViewController.swift */; };
+		7DCC8AACC9AA48BC660A4C319BE8091E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD88834277C526B848505214B3E796A /* Assets.xcassets */; };
+		DB9CF973381E68700E94FFD79CA8D967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42654E0838ED275356069771C264DEB2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BEA81C1D210709B30044EBD9 /* Hourglass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hourglass.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEA81C20210709B30044EBD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEA81C22210709B30044EBD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEA81C25210709B30044EBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BEA81C27210709B30044EBD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BEA81C2A210709B30044EBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BEA81C2C210709B30044EBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1117F042F7C881C67E67A5D62DD00013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD88834277C526B848505214B3E796A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26BD6667899332607D76460CE5FC08FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CBD8B2F21EE2366BFE7F500734F05BB /* Pods-Hourglass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourglass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass.debug.xcconfig"; sourceTree = "<group>"; };
+		439103ABF97E2DBAEE8058A26CC4C95B /* Pods-Hourglass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourglass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass.release.xcconfig"; sourceTree = "<group>"; };
+		9F342B3248F8F9DD89DCBA27E0D5381B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C767C9459866410C67D5D74D2648ED70 /* Pods_Hourglass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hourglass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97433E8271B77709813ECBD5EDA33E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E69DFCF253E13ED531DDB327CAE1170B /* Hourglass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hourglass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8EB19C5BA06B731B241922CEE67242 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BEA81C1A210709B30044EBD9 /* Frameworks */ = {
+		F7EE463CF0D1C17D03824FD7C5CC2882 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577A936C324237E301852F7CB1EB472D /* Pods_Hourglass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BEA81C14210709B30044EBD9 = {
+		36B1AA4C29C5121C25922422C7825BB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BEA81C1F210709B30044EBD9 /* Hourglass */,
-				BEA81C1E210709B30044EBD9 /* Products */,
+				3CBD8B2F21EE2366BFE7F500734F05BB /* Pods-Hourglass.debug.xcconfig */,
+				439103ABF97E2DBAEE8058A26CC4C95B /* Pods-Hourglass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D28F828B1BEF4CB01F11EE37BDDF9F13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C767C9459866410C67D5D74D2648ED70 /* Pods_Hourglass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0080AA33EE053B0C2FDA4E49035334B4 = {
+			isa = PBXGroup;
+			children = (
+				D28F828B1BEF4CB01F11EE37BDDF9F13 /* Frameworks */,
+				60DC8409AF7443B028039C3DBF45A571 /* Hourglass */,
+				36B1AA4C29C5121C25922422C7825BB3 /* Pods */,
+				70701C1570535592FD7377B92CE71FE9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BEA81C1E210709B30044EBD9 /* Products */ = {
+		70701C1570535592FD7377B92CE71FE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEA81C1D210709B30044EBD9 /* Hourglass.app */,
+				E69DFCF253E13ED531DDB327CAE1170B /* Hourglass.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BEA81C1F210709B30044EBD9 /* Hourglass */ = {
+		60DC8409AF7443B028039C3DBF45A571 /* Hourglass */ = {
 			isa = PBXGroup;
 			children = (
-				BEA81C20210709B30044EBD9 /* AppDelegate.swift */,
-				BEA81C22210709B30044EBD9 /* ViewController.swift */,
-				BEA81C24210709B30044EBD9 /* Main.storyboard */,
-				BEA81C27210709B30044EBD9 /* Assets.xcassets */,
-				BEA81C29210709B30044EBD9 /* LaunchScreen.storyboard */,
-				BEA81C2C210709B30044EBD9 /* Info.plist */,
+				26BD6667899332607D76460CE5FC08FC /* AppDelegate.swift */,
+				1FD88834277C526B848505214B3E796A /* Assets.xcassets */,
+				1117F042F7C881C67E67A5D62DD00013 /* Info.plist */,
+				65827C7B35790C83550F3AEFB1250071 /* LaunchScreen.storyboard */,
+				42654E0838ED275356069771C264DEB2 /* Main.storyboard */,
+				FA8EB19C5BA06B731B241922CEE67242 /* ViewController.swift */,
 			);
 			path = Hourglass;
 			sourceTree = "<group>";
@@ -67,13 +91,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEA81C1C210709B30044EBD9 /* Hourglass */ = {
+		C085567E47336E1488736007820DF8F1 /* Hourglass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEA81C2F210709B30044EBD9 /* Build configuration list for PBXNativeTarget "Hourglass" */;
+			buildConfigurationList = 55F4022047779082A136A436032CA10D /* Build configuration list for PBXNativeTarget "Hourglass" */;
 			buildPhases = (
-				BEA81C19210709B30044EBD9 /* Sources */,
-				BEA81C1A210709B30044EBD9 /* Frameworks */,
-				BEA81C1B210709B30044EBD9 /* Resources */,
+				61A827D33279EBD2F4E4DFBC476C89FE /* [CP] Check Pods Manifest.lock */,
+				33866C1DB2421B455A998CF429CDF403 /* Sources */,
+				F7EE463CF0D1C17D03824FD7C5CC2882 /* Frameworks */,
+				70BCCDD8B313232C6ED3E98B43D5D208 /* Resources */,
+				E1BEDF6F41A744A8D2D6336048A05BF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -81,25 +107,25 @@
 			);
 			name = Hourglass;
 			productName = Hourglass;
-			productReference = BEA81C1D210709B30044EBD9 /* Hourglass.app */;
+			productReference = E69DFCF253E13ED531DDB327CAE1170B /* Hourglass.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BEA81C15210709B30044EBD9 /* Project object */ = {
+		A31055F5B9C527067F7EEBCA069D370C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Cell5;
 				TargetAttributes = {
-					BEA81C1C210709B30044EBD9 = {
+					C085567E47336E1488736007820DF8F1 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = BEA81C18210709B30044EBD9 /* Build configuration list for PBXProject "Hourglass" */;
+			buildConfigurationList = E5597513DC567C7865F2A42AD2BA3EB5 /* Build configuration list for PBXProject "Hourglass" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +133,95 @@
 				en,
 				Base,
 			);
-			mainGroup = BEA81C14210709B30044EBD9;
-			productRefGroup = BEA81C1E210709B30044EBD9 /* Products */;
+			mainGroup = 0080AA33EE053B0C2FDA4E49035334B4;
+			productRefGroup = 70701C1570535592FD7377B92CE71FE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEA81C1C210709B30044EBD9 /* Hourglass */,
+				C085567E47336E1488736007820DF8F1 /* Hourglass */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BEA81C1B210709B30044EBD9 /* Resources */ = {
+		70BCCDD8B313232C6ED3E98B43D5D208 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA81C2B210709B30044EBD9 /* LaunchScreen.storyboard in Resources */,
-				BEA81C28210709B30044EBD9 /* Assets.xcassets in Resources */,
-				BEA81C26210709B30044EBD9 /* Main.storyboard in Resources */,
+				7DCC8AACC9AA48BC660A4C319BE8091E /* Assets.xcassets in Resources */,
+				0FEBCCAE58F9BE994A5E772EA30C9367 /* LaunchScreen.storyboard in Resources */,
+				DB9CF973381E68700E94FFD79CA8D967 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61A827D33279EBD2F4E4DFBC476C89FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hourglass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BEDF6F41A744A8D2D6336048A05BF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		BEA81C19210709B30044EBD9 /* Sources */ = {
+		33866C1DB2421B455A998CF429CDF403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA81C23210709B30044EBD9 /* ViewController.swift in Sources */,
-				BEA81C21210709B30044EBD9 /* AppDelegate.swift in Sources */,
+				32045C8D81B8B8A50CED496F60B9386C /* AppDelegate.swift in Sources */,
+				5E0B9FDA40DC39F7F61B768E28CC6696 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BEA81C24210709B30044EBD9 /* Main.storyboard */ = {
+		42654E0838ED275356069771C264DEB2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BEA81C25210709B30044EBD9 /* Base */,
+				9F342B3248F8F9DD89DCBA27E0D5381B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BEA81C29210709B30044EBD9 /* LaunchScreen.storyboard */ = {
+		65827C7B35790C83550F3AEFB1250071 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BEA81C2A210709B30044EBD9 /* Base */,
+				C97433E8271B77709813ECBD5EDA33E2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +229,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BEA81C2D210709B30044EBD9 /* Debug */ = {
+		7B4965003170CAE4C61B634457C6BBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +289,7 @@
 			};
 			name = Debug;
 		};
-		BEA81C2E210709B30044EBD9 /* Release */ = {
+		460924FA49F9B589F878A278A84601AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -276,8 +343,9 @@
 			};
 			name = Release;
 		};
-		BEA81C30210709B30044EBD9 /* Debug */ = {
+		1208CC6110975D9E21E1CBA6C3EAF16D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CBD8B2F21EE2366BFE7F500734F05BB /* Pods-Hourglass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,8 +362,9 @@
 			};
 			name = Debug;
 		};
-		BEA81C31210709B30044EBD9 /* Release */ = {
+		92315FA664FB0583C89AB32BD954B5ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439103ABF97E2DBAEE8058A26CC4C95B /* Pods-Hourglass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,25 +384,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEA81C18210709B30044EBD9 /* Build configuration list for PBXProject "Hourglass" */ = {
+		E5597513DC567C7865F2A42AD2BA3EB5 /* Build configuration list for PBXProject "Hourglass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BEA81C2D210709B30044EBD9 /* Debug */,
-				BEA81C2E210709B30044EBD9 /* Release */,
+				7B4965003170CAE4C61B634457C6BBF0 /* Debug */,
+				460924FA49F9B589F878A278A84601AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEA81C2F210709B30044EBD9 /* Build configuration list for PBXNativeTarget "Hourglass" */ = {
+		55F4022047779082A136A436032CA10D /* Build configuration list for PBXNativeTarget "Hourglass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BEA81C30210709B30044EBD9 /* Debug */,
-				BEA81C31210709B30044EBD9 /* Release */,
+				1208CC6110975D9E21E1CBA6C3EAF16D /* Debug */,
+				92315FA664FB0583C89AB32BD954B5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BEA81C15210709B30044EBD9 /* Project object */;
+	rootObject = A31055F5B9C527067F7EEBCA069D370C /* Project object */;
 }
