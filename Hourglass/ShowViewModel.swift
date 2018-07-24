@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 final class ShowViewModel {
+  private var imageQueue: [String] = []
+  private var displaySecond: Int = 0
+
   
+
 }
