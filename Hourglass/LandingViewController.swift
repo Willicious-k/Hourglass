@@ -23,6 +23,8 @@ class LandingViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+//    timer.rx.value.share()
+
     timer.rx.value
       .filter { value in
         value < 1

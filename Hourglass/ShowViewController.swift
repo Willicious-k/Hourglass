@@ -14,12 +14,6 @@ import Kingfisher
 
 class ShowViewController: UIViewController {
 
-  enum Request {
-    case initialized(Int)
-    case nextImage
-    case secChanged(Int)
-  }
-
   @IBOutlet weak var timer: UISlider!
   @IBOutlet weak var durationLabel: UILabel!
 
