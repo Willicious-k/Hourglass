@@ -12,5 +12,6 @@ target 'Hourglass' do
   pod 'Kingfisher'
   pod 'SnapKit'
 	pod 'Argo'
+	pod 'Curry'
 
 end
