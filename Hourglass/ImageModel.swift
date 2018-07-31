@@ -18,9 +18,12 @@ struct ImageList {
 }
 
 extension ImageList: Argo.Decodable {
+
   static func decode(_ json: JSON) -> Decoded<ImageList> {
-    return curry(ImageList.init)
+    let initialized = curry(ImageList.init)
       <^> json <|| "items"
+
+    return initialized
   }
 }
 
@@ -32,9 +35,11 @@ struct ImageItem {
 
 extension ImageItem: Argo.Decodable {
   static func decode(_ json: JSON) -> Decoded<ImageItem> {
-    return curry(ImageItem.init)
+    let initialized = curry(ImageItem.init)
       <^> json <| "title"
       <*> json <| "link"
       <*> json <| "author"
+
+    return initialized
   }
 }
