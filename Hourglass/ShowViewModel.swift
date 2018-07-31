@@ -19,19 +19,18 @@ class ShowViewModel {
   }
 
   private let endpoint = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json")!
+  private var images: [ImageItem] = []
   var disposeBag = DisposeBag()
-  var images: [ImageItem] = []
 
   init() {
-    self.getFeedString()
+    self.getFeedList()
       .subscribe(onSuccess: { list in
         self.images = list.items
-        print(self.images)
       })
       .disposed(by: disposeBag)
   }
 
-  private func getFeedString() -> Single<ImageList> {
+  private func getFeedList() -> Single<ImageList> {
     return Single.create(subscribe: { [weak self] (maker) -> Disposable in
       guard let `self` = self else {
         maker(SingleEvent.error(ModelError.lostVC))

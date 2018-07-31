@@ -62,7 +62,7 @@ class LandingViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let dest = segue.destination as? ShowViewController {
-      dest.initialDuration = Int(timer.value)
+      dest.duration = Int(timer.value)
     }
   }
 
