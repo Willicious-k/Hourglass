@@ -31,6 +31,8 @@ class ShowViewController: UIViewController {
     super.viewDidLoad()
     slider.setValue(Float(duration), animated: true)
 
+    imageView.kf.indicatorType = .activity
+
     // subscribing to slider.rx.value does not emit any event
     // because it actually requires ControlEvent
     startNext
