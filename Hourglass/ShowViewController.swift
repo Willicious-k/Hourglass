@@ -28,10 +28,6 @@ class ShowViewController: UIViewController {
   var startNext = PublishSubject<Void>()
   var subscription: Disposable!
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     viewModel = ShowViewModel()
@@ -52,10 +48,6 @@ class ShowViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
       })
       .disposed(by: disposeBag)
-  }
-
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
 
     viewModel.modelReady //.debug("modelReady")
       .subscribe(onNext: {
@@ -76,7 +68,6 @@ class ShowViewController: UIViewController {
 
   private func renderImage() {
     guard let imageToShow = currentImage, let link = URL(string: imageToShow.media) else { return }
-    print(imageToShow)
 
     imageView.kf.setImage(with: link, options: [.transition( .flipFromRight(0.3) )])
   }
