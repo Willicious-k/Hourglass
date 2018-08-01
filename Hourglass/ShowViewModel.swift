@@ -25,7 +25,7 @@ class ShowViewModel {
   var disposeBag = DisposeBag()
 
   init() {
-    self.getFeedList()
+    self.getFeedList() //.debug("VM init")
       .subscribe(onSuccess: { list in
         self.images = list.items
         self.modelReady.onNext(Void())

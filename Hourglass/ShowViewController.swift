@@ -19,8 +19,9 @@ class ShowViewController: UIViewController {
   var currentImage: ImageItem!
 
   let frameDelta: Float = 0.03
-  let disposeBag = DisposeBag()
-  let viewModel = ShowViewModel()
+
+  var viewModel: ShowViewModel!
+  var disposeBag = DisposeBag()
 
   var duration: Int = 0
   var timer = Observable<Int>.empty()
@@ -29,13 +30,18 @@ class ShowViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewModel = ShowViewModel()
     slider.setValue(Float(duration), animated: true)
 
     imageView.kf.indicatorType = .activity
 
     // subscribing to slider.rx.value does not emit any event
     // because it actually requires ControlEvent
-    startNext
+    startNext //.debug("startNext")
       .subscribe(onNext: { _ in
         self.cleanAndFetch()
         self.renderImage()
@@ -51,11 +57,17 @@ class ShowViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
-    viewModel.modelReady
+    viewModel.modelReady //.debug("modelReady")
       .subscribe(onNext: {
         self.startNext.onNext(Void())
       })
       .disposed(by: disposeBag)
+  }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    viewModel = nil
+    disposeBag = DisposeBag()
   }
 
   private func cleanAndFetch() {
