@@ -15,9 +15,8 @@ import Kingfisher
 class ShowViewController: UIViewController {
 
   @IBOutlet weak var slider: UISlider!
-
+  @IBOutlet weak var imageView: UIImageView!
   var currentImage: ImageItem!
-  var imageView: UIImageView!
 
   let frameDelta: Float = 0.03
   let disposeBag = DisposeBag()
@@ -58,15 +57,14 @@ class ShowViewController: UIViewController {
   }
 
   private func cleanAndFetch() {
-    if let displaying = imageView {
-      displaying.removeFromSuperview()
-    }
     currentImage = viewModel.fetchNext()
-    print(currentImage)
   }
 
   private func renderImage() {
-    guard let imageToShow = currentImage else { return }
+    guard let imageToShow = currentImage, let link = URL(string: imageToShow.media) else { return }
+    print(imageToShow)
+
+    imageView.kf.setImage(with: link, options: [.transition( .flipFromRight(0.3) )])
   }
 
   private func refreshTimer() {

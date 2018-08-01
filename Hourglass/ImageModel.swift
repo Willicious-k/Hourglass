@@ -31,6 +31,7 @@ struct ImageItem {
   let title: String
   let link: String
   let author: String
+  let media: String
 }
 
 extension ImageItem: Argo.Decodable {
@@ -39,6 +40,7 @@ extension ImageItem: Argo.Decodable {
       <^> json <| "title"
       <*> json <| "link"
       <*> json <| "author"
+      <*> json <| ["media", "m"]
 
     return initialized
   }
