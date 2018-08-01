@@ -14,7 +14,7 @@ import Kingfisher
 
 class ShowViewController: UIViewController {
 
-  @IBOutlet weak var slider: UISlider!
+  @IBOutlet weak var timeBar: UIProgressView!
   @IBOutlet weak var imageView: UIImageView!
   var currentImage: ImageItem!
 
@@ -31,7 +31,7 @@ class ShowViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     viewModel = ShowViewModel()
-    slider.setValue(Float(duration), animated: true)
+    timeBar.setProgress(1.0, animated: true)
 
     imageView.kf.indicatorType = .activity
 
@@ -80,10 +80,11 @@ class ShowViewController: UIViewController {
   private func refreshSubscription() {
     subscription = timer.map { (delta) -> Float in
         let passed = Float(delta) * self.frameDelta
-        return Float(self.duration) - passed
+        let leftOver = Float(self.duration) - passed
+        return leftOver / Float(self.duration)
       }
-      .subscribe(onNext: { sec in
-        self.slider.setValue(sec, animated: true)
+      .subscribe(onNext: { progress in
+        self.timeBar.setProgress(progress, animated: true)
       }, onCompleted: {
         self.subscription.dispose()
         self.startNext.onNext(Void())
