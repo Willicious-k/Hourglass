@@ -20,14 +20,22 @@ class ShowViewModel {
 
   private let endpoint = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json")!
   private var images: [ImageItem] = []
+
+  var modelReady = PublishSubject<Void>()
   var disposeBag = DisposeBag()
 
   init() {
     self.getFeedList()
       .subscribe(onSuccess: { list in
         self.images = list.items
+        self.modelReady.onNext(Void())
       })
       .disposed(by: disposeBag)
+  }
+
+  func fetchNext() -> ImageItem {
+    let next = images.removeFirst()
+    return next
   }
 
   private func getFeedList() -> Single<ImageList> {
