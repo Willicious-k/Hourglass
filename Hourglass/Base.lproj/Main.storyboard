@@ -21,21 +21,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-98-sBm" userLabel="ControlStack">
-                                <rect key="frame" x="75" y="335.5" width="225" height="108.5"/>
+                                <rect key="frame" x="22.5" y="335.5" width="330" height="108.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-LD-ph7" userLabel="durationLabel">
-                                        <rect key="frame" x="110.5" y="0.0" width="4.5" height="20.5"/>
+                                        <rect key="frame" x="163" y="0.0" width="4.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-tw-P9i">
-                                        <rect key="frame" x="-2" y="32.5" width="229" height="31"/>
+                                        <rect key="frame" x="-2" y="32.5" width="334" height="31"/>
                                         <color key="minimumTrackTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8V-Po-Bl6">
-                                        <rect key="frame" x="68" y="74.5" width="89" height="34"/>
+                                        <rect key="frame" x="120.5" y="74.5" width="89" height="34"/>
                                         <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Start Show">
                                             <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +71,7 @@
                             <constraint firstItem="ahU-98-sBm" firstAttribute="top" secondItem="RcR-wC-6yV" secondAttribute="bottom" constant="80" id="Rkp-cC-A34"/>
                             <constraint firstItem="ahU-98-sBm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dJo-SX-vbZ"/>
                             <constraint firstItem="ahU-98-sBm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="56" id="qzl-Q1-uox"/>
-                            <constraint firstItem="ahU-98-sBm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="scv-Mz-IBv"/>
+                            <constraint firstItem="ahU-98-sBm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.88" id="scv-Mz-IBv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,14 +95,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-H1-Vpf" userLabel="ControlStack">
-                                <rect key="frame" x="75" y="539.5" width="225" height="47.5"/>
+                                <rect key="frame" x="23" y="539.5" width="330" height="47.5"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-jm-twT">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="2.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="2.5"/>
                                         <color key="progressTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kf-CW-SPl">
-                                        <rect key="frame" x="73" y="13.5" width="79" height="34"/>
+                                        <rect key="frame" x="125.5" y="13.5" width="79" height="34"/>
                                         <state key="normal" title="Exit Show">
                                             <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -128,7 +128,7 @@
                             <constraint firstItem="yV2-cB-RH9" firstAttribute="centerY" secondItem="pg6-7B-Vfg" secondAttribute="centerY" constant="-64" id="Kyb-Nb-Okw"/>
                             <constraint firstItem="fK7-Ir-Q01" firstAttribute="bottom" secondItem="eRY-H1-Vpf" secondAttribute="bottom" constant="80" id="Qoj-EF-6Hq"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="ceb-7Y-QcX"/>
-                            <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.6" id="fYp-6c-8NZ"/>
+                            <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.88" id="fYp-6c-8NZ"/>
                             <constraint firstItem="yV2-cB-RH9" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="iWI-QP-UM1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK7-Ir-Q01"/>
