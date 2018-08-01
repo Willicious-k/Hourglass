@@ -19,22 +19,35 @@ class ShowViewModel {
   }
 
   private let endpoint = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json")!
-  private var images: [ImageItem] = []
+  private var images = BehaviorSubject<[ImageItem]>(value: [])
 
   var modelReady = PublishSubject<Void>()
-  var disposeBag = DisposeBag()
+  let disposeBag = DisposeBag()
 
   init() {
-    self.getFeedList() //.debug("VM init")
+    getFeedList() //.debug("VM init")
       .subscribe(onSuccess: { list in
-        self.images = list.items
+        self.images.onNext(list.items)
         self.modelReady.onNext(Void())
+      })
+      .disposed(by: disposeBag)
+
+    images
+      .filter { (list) -> Bool in
+        list.count == 2
+      }
+      .subscribe(onNext: { list in // list.count == 2
+        self.doPrefetch()
       })
       .disposed(by: disposeBag)
   }
 
   func fetchNext() -> ImageItem {
-    let next = images.removeFirst()
+    guard var list = try? images.value() else {
+      return ImageItem(title: " ", link: " ", author: " ", media: " ")
+    }
+    let next = list.removeFirst()
+    images.onNext(list)
     return next
   }
 
@@ -63,6 +76,18 @@ class ShowViewModel {
       }
       return Disposables.create()
     })
+  }
+
+  private func doPrefetch() {
+    getFeedList()
+      .subscribe(onSuccess: { list in
+        if let oldList = try? self.images.value() {
+          let newList = oldList + list.items
+          print("\(oldList.count) -> \(newList.count)")
+          self.images.onNext(newList)
+        }
+      })
+      .disposed(by: disposeBag)
   }
 
 }
