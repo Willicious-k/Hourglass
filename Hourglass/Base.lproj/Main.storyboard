@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-98-sBm" userLabel="ControlStack">
-                                <rect key="frame" x="75" y="279.5" width="225" height="108.5"/>
+                                <rect key="frame" x="75" y="335.5" width="225" height="108.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-LD-ph7" userLabel="durationLabel">
                                         <rect key="frame" x="110.5" y="0.0" width="4.5" height="20.5"/>
@@ -52,7 +53,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcR-wC-6yV">
-                                <rect key="frame" x="116" y="170" width="144" height="37.5"/>
+                                <rect key="frame" x="116" y="218" width="144" height="37.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Hourglass">
                                         <attributes>
@@ -67,9 +68,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RcR-wC-6yV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zC-QF-SfM"/>
-                            <constraint firstItem="ahU-98-sBm" firstAttribute="top" secondItem="RcR-wC-6yV" secondAttribute="bottom" constant="72" id="Rkp-cC-A34"/>
+                            <constraint firstItem="ahU-98-sBm" firstAttribute="top" secondItem="RcR-wC-6yV" secondAttribute="bottom" constant="80" id="Rkp-cC-A34"/>
                             <constraint firstItem="ahU-98-sBm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dJo-SX-vbZ"/>
-                            <constraint firstItem="ahU-98-sBm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qzl-Q1-uox"/>
+                            <constraint firstItem="ahU-98-sBm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="56" id="qzl-Q1-uox"/>
                             <constraint firstItem="ahU-98-sBm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="scv-Mz-IBv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,11 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-cB-RH9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-H1-Vpf" userLabel="ControlStack">
-                                <rect key="frame" x="75" y="559" width="225" height="76"/>
+                                <rect key="frame" x="75" y="511" width="225" height="76"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="s5J-P1-qEj">
                                         <rect key="frame" x="-2" y="0.0" width="229" height="31"/>
@@ -118,16 +116,21 @@
                                     <constraint firstItem="s5J-P1-qEj" firstAttribute="width" secondItem="eRY-H1-Vpf" secondAttribute="width" id="pFG-KJ-V6V"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-cB-RH9">
+                                <rect key="frame" x="67.5" y="149.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7uy-Cn-ntA"/>
+                                    <constraint firstAttribute="width" secondItem="yV2-cB-RH9" secondAttribute="height" multiplier="1:1" id="gCg-h1-jab"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="bottom" secondItem="fK7-Ir-Q01" secondAttribute="bottom" id="52d-TQ-aW7"/>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="trailing" secondItem="fK7-Ir-Q01" secondAttribute="trailing" id="QUQ-Ca-U8A"/>
-                            <constraint firstItem="fK7-Ir-Q01" firstAttribute="bottom" secondItem="eRY-H1-Vpf" secondAttribute="bottom" constant="32" id="Qoj-EF-6Hq"/>
+                            <constraint firstItem="yV2-cB-RH9" firstAttribute="centerY" secondItem="pg6-7B-Vfg" secondAttribute="centerY" constant="-64" id="Kyb-Nb-Okw"/>
+                            <constraint firstItem="fK7-Ir-Q01" firstAttribute="bottom" secondItem="eRY-H1-Vpf" secondAttribute="bottom" constant="80" id="Qoj-EF-6Hq"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="ceb-7Y-QcX"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.6" id="fYp-6c-8NZ"/>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="leading" secondItem="fK7-Ir-Q01" secondAttribute="leading" id="hxm-dV-YSu"/>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="top" secondItem="fK7-Ir-Q01" secondAttribute="top" id="xyr-1i-eNz"/>
+                            <constraint firstItem="yV2-cB-RH9" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="iWI-QP-UM1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK7-Ir-Q01"/>
                     </view>
