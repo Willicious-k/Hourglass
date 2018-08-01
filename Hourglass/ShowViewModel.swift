@@ -21,7 +21,7 @@ class ShowViewModel {
   private let endpoint = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json")!
   private var images = BehaviorSubject<[ImageItem]>(value: [])
 
-  var modelReady = PublishSubject<Void>()
+  let modelReady = PublishSubject<Void>()
   let disposeBag = DisposeBag()
 
   init() {
