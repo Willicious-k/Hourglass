@@ -95,14 +95,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-H1-Vpf" userLabel="ControlStack">
-                                <rect key="frame" x="23" y="539.5" width="330" height="47.5"/>
+                                <rect key="frame" x="8" y="539.5" width="360" height="47.5"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-jm-twT">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="2.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="2.5"/>
                                         <color key="progressTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kf-CW-SPl">
-                                        <rect key="frame" x="125.5" y="13.5" width="79" height="34"/>
+                                        <rect key="frame" x="140.5" y="13.5" width="79" height="34"/>
                                         <state key="normal" title="Exit Show">
                                             <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -115,27 +115,38 @@
                                     <constraint firstItem="GCo-jm-twT" firstAttribute="width" secondItem="eRY-H1-Vpf" secondAttribute="width" id="Qdv-4w-suX"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-cB-RH9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-1R-j59" userLabel="leftImageView">
                                 <rect key="frame" x="67.5" y="149.5" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7uy-Cn-ntA"/>
-                                    <constraint firstAttribute="width" secondItem="yV2-cB-RH9" secondAttribute="height" multiplier="1:1" id="gCg-h1-jab"/>
+                                    <constraint firstAttribute="width" constant="240" id="I4J-Nf-0Gn"/>
+                                    <constraint firstAttribute="width" secondItem="LGb-1R-j59" secondAttribute="height" multiplier="1:1" id="hVD-qv-Hqi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-yd-R7M" userLabel="rightImageView">
+                                <rect key="frame" x="682.5" y="149.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TNh-yd-R7M" secondAttribute="height" multiplier="1:1" id="JOh-bD-KWc"/>
+                                    <constraint firstAttribute="width" constant="240" id="aik-rw-WVN"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="centerY" secondItem="pg6-7B-Vfg" secondAttribute="centerY" constant="-64" id="Kyb-Nb-Okw"/>
+                            <constraint firstItem="LGb-1R-j59" firstAttribute="centerY" secondItem="TNh-yd-R7M" secondAttribute="centerY" id="AYi-Iq-dUU"/>
+                            <constraint firstItem="LGb-1R-j59" firstAttribute="centerY" secondItem="pg6-7B-Vfg" secondAttribute="centerY" constant="-64" id="Gmm-LY-bSV"/>
                             <constraint firstItem="fK7-Ir-Q01" firstAttribute="bottom" secondItem="eRY-H1-Vpf" secondAttribute="bottom" constant="80" id="Qoj-EF-6Hq"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="ceb-7Y-QcX"/>
-                            <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.88" id="fYp-6c-8NZ"/>
-                            <constraint firstItem="yV2-cB-RH9" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="iWI-QP-UM1"/>
+                            <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.96" id="fYp-6c-8NZ"/>
+                            <constraint firstItem="TNh-yd-R7M" firstAttribute="leading" secondItem="LGb-1R-j59" secondAttribute="trailing" constant="375" id="gCH-eI-Owc"/>
+                            <constraint firstItem="LGb-1R-j59" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="yeM-UI-g0D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK7-Ir-Q01"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="imageView" destination="yV2-cB-RH9" id="lef-g3-ttH"/>
+                        <outlet property="leftImageCenterX" destination="yeM-UI-g0D" id="0gG-J6-R6T"/>
+                        <outlet property="leftImageView" destination="LGb-1R-j59" id="IhZ-cn-upf"/>
+                        <outlet property="rightImageView" destination="TNh-yd-R7M" id="nfr-1d-qpQ"/>
                         <outlet property="timeBar" destination="GCo-jm-twT" id="8Ll-Tv-A1o"/>
                     </connections>
                 </viewController>

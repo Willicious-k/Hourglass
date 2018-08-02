@@ -14,13 +14,17 @@ import Kingfisher
 
 class ShowViewController: UIViewController {
 
-  @IBOutlet weak var timeBar: UIProgressView!
-  @IBOutlet weak var imageView: UIImageView!
+  let frameDelta: Float = 0.03
 
-  var currentImage: ImageItem! // viewModel should give UIImage or cacheKey, not URL
+  @IBOutlet weak var timeBar: UIProgressView!
+  @IBOutlet weak var leftImageView: UIImageView!
+  @IBOutlet weak var rightImageView: UIImageView!
+  @IBOutlet weak var leftImageCenterX: NSLayoutConstraint!
+  
+  var nextItem: ImageItem! // url is cacheKey
+  var willMoveToLeft: Bool = false
   var imageModel: ImageModel!
   var duration: Int = 0
-  let frameDelta: Float = 0.03
 
   var disposeBag = DisposeBag()
   var timer = Observable<Int>.empty()
@@ -30,13 +34,18 @@ class ShowViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     timeBar.setProgress(1.0, animated: true)
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 
     // subscribing to slider.rx.value does not emit any event
     // because it actually requires ControlEvent
     startNext //.debug("startNext")
       .subscribe(onNext: { _ in
-        self.fetchImageKey()
-        self.renderImage()
+        self.willMoveToLeft = !self.willMoveToLeft
+        self.prepareNextImage()
+        self.renderShow()
         self.refreshTimer()
         self.refreshSubscription()
       }, onError: { error in
@@ -60,14 +69,34 @@ class ShowViewController: UIViewController {
     disposeBag = DisposeBag()
   }
 
-  private func fetchImageKey() {
-    currentImage = imageModel.fetchNext()
+  private func prepareNextImage() {
+    nextItem = imageModel.fetchNext()
+    guard let url = URL(string: nextItem.media) else { return }
+
+    if willMoveToLeft {
+      rightImageView.kf.setImage(with: url)
+    } else {
+      leftImageView.kf.setImage(with: url)
+    }
   }
 
-  private func renderImage() {
-    guard let imageToShow = currentImage, let key = URL(string: imageToShow.media) else { return }
+  private func renderShow() {
+    if willMoveToLeft {
+      leftImageCenterX.constant = -(UIScreen.main.nativeBounds.width / 2.0)
+    } else {
+      leftImageCenterX.constant = 0
+    }
 
-    imageView.kf.setImage(with: key, options: [.transition( .flipFromRight(0.2) )])
+    UIView.animate(withDuration: 0.3, animations: {
+      self.view.layoutIfNeeded()
+      if self.willMoveToLeft {
+        self.leftImageView.alpha = 0.0
+        self.rightImageView.alpha = 1.0
+      } else {
+        self.leftImageView.alpha = 1.0
+        self.rightImageView.alpha = 0.0
+      }
+    }, completion: nil)
   }
 
   private func refreshTimer() {
@@ -78,8 +107,12 @@ class ShowViewController: UIViewController {
   private func refreshSubscription() {
     subscription = timer.map { (delta) -> Float in
         let passed = Float(delta) * self.frameDelta
-        let leftOver = Float(self.duration) - passed
-        return leftOver / Float(self.duration)
+        if self.willMoveToLeft {
+          let leftOver = Float(self.duration) - passed
+          return leftOver / Float(self.duration)
+        } else {
+          return passed / Float(self.duration)
+        }
       }
       .subscribe(onNext: { progress in
         self.timeBar.setProgress(progress, animated: false)
