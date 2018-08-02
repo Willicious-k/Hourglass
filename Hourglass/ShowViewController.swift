@@ -20,6 +20,7 @@ class ShowViewController: UIViewController {
   @IBOutlet weak var leftImageView: UIImageView!
   @IBOutlet weak var rightImageView: UIImageView!
   @IBOutlet weak var leftImageCenterX: NSLayoutConstraint!
+  @IBOutlet weak var rightImageCenterX: NSLayoutConstraint!
   
   var nextItem: ImageItem! // url is cacheKey
   var willMoveToLeft: Bool = false
@@ -83,8 +84,10 @@ class ShowViewController: UIViewController {
   private func renderShow() {
     if willMoveToLeft {
       leftImageCenterX.constant = -(UIScreen.main.nativeBounds.width / 2.0)
+      rightImageCenterX.constant = 0
     } else {
       leftImageCenterX.constant = 0
+      rightImageCenterX.constant = (UIScreen.main.nativeBounds.width / 2.0)
     }
 
     UIView.animate(withDuration: 0.3, animations: {

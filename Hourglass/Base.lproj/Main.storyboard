@@ -115,18 +115,18 @@
                                     <constraint firstItem="GCo-jm-twT" firstAttribute="width" secondItem="eRY-H1-Vpf" secondAttribute="width" id="Qdv-4w-suX"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-1R-j59" userLabel="leftImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-1R-j59" userLabel="leftImageView">
                                 <rect key="frame" x="67.5" y="149.5" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="I4J-Nf-0Gn"/>
                                     <constraint firstAttribute="width" secondItem="LGb-1R-j59" secondAttribute="height" multiplier="1:1" id="hVD-qv-Hqi"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-yd-R7M" userLabel="rightImageView">
-                                <rect key="frame" x="682.5" y="149.5" width="240" height="240"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-yd-R7M" userLabel="rightImageView">
+                                <rect key="frame" x="442.5" y="149.5" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TNh-yd-R7M" secondAttribute="height" multiplier="1:1" id="JOh-bD-KWc"/>
-                                    <constraint firstAttribute="width" constant="240" id="aik-rw-WVN"/>
+                                    <constraint firstAttribute="width" constant="240" id="nLI-jT-umM"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -137,7 +137,7 @@
                             <constraint firstItem="fK7-Ir-Q01" firstAttribute="bottom" secondItem="eRY-H1-Vpf" secondAttribute="bottom" constant="80" id="Qoj-EF-6Hq"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="ceb-7Y-QcX"/>
                             <constraint firstItem="eRY-H1-Vpf" firstAttribute="width" secondItem="pg6-7B-Vfg" secondAttribute="width" multiplier="0.96" id="fYp-6c-8NZ"/>
-                            <constraint firstItem="TNh-yd-R7M" firstAttribute="leading" secondItem="LGb-1R-j59" secondAttribute="trailing" constant="375" id="gCH-eI-Owc"/>
+                            <constraint firstItem="TNh-yd-R7M" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" constant="375" id="yOB-Ei-1W8"/>
                             <constraint firstItem="LGb-1R-j59" firstAttribute="centerX" secondItem="pg6-7B-Vfg" secondAttribute="centerX" id="yeM-UI-g0D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK7-Ir-Q01"/>
@@ -146,6 +146,7 @@
                     <connections>
                         <outlet property="leftImageCenterX" destination="yeM-UI-g0D" id="0gG-J6-R6T"/>
                         <outlet property="leftImageView" destination="LGb-1R-j59" id="IhZ-cn-upf"/>
+                        <outlet property="rightImageCenterX" destination="yOB-Ei-1W8" id="7K9-fx-AjV"/>
                         <outlet property="rightImageView" destination="TNh-yd-R7M" id="nfr-1d-qpQ"/>
                         <outlet property="timeBar" destination="GCo-jm-twT" id="8Ll-Tv-A1o"/>
                     </connections>
