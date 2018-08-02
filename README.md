@@ -1,14 +1,9 @@
-### TODO immediately
-1. nextSlide prefetching or loading state
+## Hourglass
+<p align="center">
+![preview](./HourglassPreview.gif)
+<p>
 
-2. better transition style
-- in navigation segue
-- in slide transition
-
-3. simple app icon
-
-
-### TODO in further future
-1. getting bigger image
-2. image resizing
-3. pause feature?
+### Points Learned
+1. Basic understanding of RxSwift
+2. How to reeve and tune lots of asynchronous callbacks using RxSwift
+3. Basic understanding of Design Pattern, MVC
