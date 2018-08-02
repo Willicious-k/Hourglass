@@ -135,14 +135,14 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="imageView" destination="yV2-cB-RH9" id="27S-Jb-ZXE"/>
+                        <outlet property="imageView" destination="yV2-cB-RH9" id="lef-g3-ttH"/>
                         <outlet property="timeBar" destination="GCo-jm-twT" id="8Ll-Tv-A1o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd9-Qp-10A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FWd-of-2EV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="687.7061469265368"/>
+            <point key="canvasLocation" x="1566" y="690"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cQY-4n-FR6">

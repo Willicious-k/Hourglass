@@ -16,7 +16,8 @@ class ShowViewController: UIViewController {
 
   @IBOutlet weak var timeBar: UIProgressView!
   @IBOutlet weak var imageView: UIImageView!
-  var currentImage: ImageItem!
+
+  var currentImage: ImageItem! // viewModel should give UIImage or cacheKey, not URL
   var viewModel: ShowViewModel!
   var duration: Int = 0
   let frameDelta: Float = 0.03
@@ -31,13 +32,11 @@ class ShowViewController: UIViewController {
     viewModel = ShowViewModel()
     timeBar.setProgress(1.0, animated: true)
 
-    imageView.kf.indicatorType = .activity
-
     // subscribing to slider.rx.value does not emit any event
     // because it actually requires ControlEvent
     startNext //.debug("startNext")
       .subscribe(onNext: { _ in
-        self.cleanAndFetch()
+        self.fetchImage()
         self.renderImage()
         self.refreshTimer()
         self.refreshSubscription()
@@ -60,7 +59,7 @@ class ShowViewController: UIViewController {
     disposeBag = DisposeBag()
   }
 
-  private func cleanAndFetch() {
+  private func fetchImage() {
     currentImage = viewModel.fetchNext()
   }
 

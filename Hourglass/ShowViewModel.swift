@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kingfisher
 import Alamofire
 import RxSwift
 import Argo
@@ -37,9 +38,10 @@ class ShowViewModel {
         list.count == 2
       }
       .subscribe(onNext: { list in // list.count == 2
-        self.doPrefetch()
+        self.doPrefetchList()
       })
       .disposed(by: disposeBag)
+
   }
 
   func fetchNext() -> ImageItem {
@@ -78,7 +80,7 @@ class ShowViewModel {
     })
   }
 
-  private func doPrefetch() {
+  private func doPrefetchList() {
     getFeedList()
       .subscribe(onSuccess: { list in
         if let oldList = try? self.images.value() {
