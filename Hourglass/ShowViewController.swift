@@ -17,13 +17,11 @@ class ShowViewController: UIViewController {
   @IBOutlet weak var timeBar: UIProgressView!
   @IBOutlet weak var imageView: UIImageView!
   var currentImage: ImageItem!
-
+  var viewModel: ShowViewModel!
+  var duration: Int = 0
   let frameDelta: Float = 0.03
 
-  var viewModel: ShowViewModel!
   var disposeBag = DisposeBag()
-
-  var duration: Int = 0
   var timer = Observable<Int>.empty()
   var startNext = PublishSubject<Void>()
   var subscription: Disposable!

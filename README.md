@@ -8,7 +8,7 @@
 3. simple app icon
 
 
-#### TODO in further future
+### TODO in further future
 1. getting bigger image
 2. image resizing
 3. pause feature?
