@@ -18,7 +18,7 @@ class ShowViewController: UIViewController {
   @IBOutlet weak var imageView: UIImageView!
 
   var currentImage: ImageItem! // viewModel should give UIImage or cacheKey, not URL
-  var viewModel: ShowViewModel!
+  var imageModel: ImageModel!
   var duration: Int = 0
   let frameDelta: Float = 0.03
 
@@ -29,14 +29,13 @@ class ShowViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    viewModel = ShowViewModel()
     timeBar.setProgress(1.0, animated: true)
 
     // subscribing to slider.rx.value does not emit any event
     // because it actually requires ControlEvent
     startNext //.debug("startNext")
       .subscribe(onNext: { _ in
-        self.fetchImage()
+        self.fetchImageKey()
         self.renderImage()
         self.refreshTimer()
         self.refreshSubscription()
@@ -46,8 +45,11 @@ class ShowViewController: UIViewController {
       })
       .disposed(by: disposeBag)
 
-    viewModel.modelReady //.debug("modelReady")
-      .subscribe(onNext: {
+    imageModel.modelReady //.debug("modelReady")
+      .filter({ (ready) -> Bool in
+        ready
+      })
+      .subscribe(onNext: { _ in
         self.startNext.onNext(Void())
       })
       .disposed(by: disposeBag)
@@ -55,18 +57,17 @@ class ShowViewController: UIViewController {
 
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    viewModel = nil
     disposeBag = DisposeBag()
   }
 
-  private func fetchImage() {
-    currentImage = viewModel.fetchNext()
+  private func fetchImageKey() {
+    currentImage = imageModel.fetchNext()
   }
 
   private func renderImage() {
-    guard let imageToShow = currentImage, let link = URL(string: imageToShow.media) else { return }
+    guard let imageToShow = currentImage, let key = URL(string: imageToShow.media) else { return }
 
-    imageView.kf.setImage(with: link, options: [.transition( .flipFromRight(0.3) )])
+    imageView.kf.setImage(with: key, options: [.transition( .flipFromRight(0.2) )])
   }
 
   private func refreshTimer() {
@@ -81,7 +82,7 @@ class ShowViewController: UIViewController {
         return leftOver / Float(self.duration)
       }
       .subscribe(onNext: { progress in
-        self.timeBar.setProgress(progress, animated: true)
+        self.timeBar.setProgress(progress, animated: false)
       }, onCompleted: {
         self.subscription.dispose()
         self.startNext.onNext(Void())

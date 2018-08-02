@@ -16,6 +16,7 @@ class LandingViewController: UIViewController {
   @IBOutlet weak var durationLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
 
+  var imageModel: ImageModel!
   let disposeBag = DisposeBag()
 
   @IBAction func unwindToLanding(segue: UIStoryboardSegue) { }
@@ -58,11 +59,13 @@ class LandingViewController: UIViewController {
     durationLabel.text = " "
     startButton.isEnabled = false
     timer.setValue(Float(0.0), animated: false)
+    imageModel = ImageModel()
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let dest = segue.destination as? ShowViewController {
       dest.duration = Int(timer.value)
+      dest.imageModel = imageModel
     }
   }
 

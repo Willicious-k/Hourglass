@@ -11,7 +11,6 @@
 		3ECD7B0B15012BBB47664893CBD664B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7141B2029356ABA4619DB726C161B1F3 /* LaunchScreen.storyboard */; };
 		53C750A6F76E5EDB7C1E6778CBB1792E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8474E2B5F7B973647040F7C88662222 /* Assets.xcassets */; };
 		577A936C324237E301852F7CB1EB472D /* Pods_Hourglass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C767C9459866410C67D5D74D2648ED70 /* Pods_Hourglass.framework */; };
-		7AC0B88F883D55DFD8AD931D01901343 /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BC9001861AAFA615144842A9F9E2E /* ShowViewModel.swift */; };
 		9636D6CBD0AE8D0F015F903483D508F8 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C53DBF041AEDA36AACBFA9D4629B8 /* ImageModel.swift */; };
 		9947A6B5951B1277A8224F479A858474 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05C3B6C39D042DBA655E68595B8168 /* LandingViewController.swift */; };
 		9BD058A45E02D2FB82F4E51A4CA0A624 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E9290BB341F0594E1E3A0486B564 /* ShowViewController.swift */; };
@@ -25,7 +24,6 @@
 		3B05C3B6C39D042DBA655E68595B8168 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		3CBD8B2F21EE2366BFE7F500734F05BB /* Pods-Hourglass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourglass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass.debug.xcconfig"; sourceTree = "<group>"; };
 		439103ABF97E2DBAEE8058A26CC4C95B /* Pods-Hourglass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hourglass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hourglass/Pods-Hourglass.release.xcconfig"; sourceTree = "<group>"; };
-		794BC9001861AAFA615144842A9F9E2E /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 		8A68E9290BB341F0594E1E3A0486B564 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		9F342B3248F8F9DD89DCBA27E0D5381B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A382EB1E34B42BFE25749CAFE2E546B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				3B05C3B6C39D042DBA655E68595B8168 /* LandingViewController.swift */,
 				42654E0838ED275356069771C264DEB2 /* Main.storyboard */,
 				8A68E9290BB341F0594E1E3A0486B564 /* ShowViewController.swift */,
-				794BC9001861AAFA615144842A9F9E2E /* ShowViewModel.swift */,
 			);
 			path = Hourglass;
 			sourceTree = "<group>";
@@ -235,7 +232,6 @@
 				9636D6CBD0AE8D0F015F903483D508F8 /* ImageModel.swift in Sources */,
 				9947A6B5951B1277A8224F479A858474 /* LandingViewController.swift in Sources */,
 				9BD058A45E02D2FB82F4E51A4CA0A624 /* ShowViewController.swift in Sources */,
-				7AC0B88F883D55DFD8AD931D01901343 /* ShowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
