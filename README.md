@@ -1,6 +1,6 @@
 ## Hourglass
 <p align="center">
-![preview](./HourglassPreview.gif)
+![preview](HourglassPreview.gif)
 <p>
 
 ### Points Learned
