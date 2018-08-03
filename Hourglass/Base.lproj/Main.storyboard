@@ -44,7 +44,7 @@
                                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="C9X-oP-eWB" kind="show" id="iWR-hY-WGn"/>
+                                            <segue destination="C9X-oP-eWB" kind="presentation" id="iWR-hY-WGn"/>
                                         </connections>
                                     </button>
                                 </subviews>
